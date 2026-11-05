@@ -9,6 +9,8 @@ starts at M0 in crates/.
 - Blueprint: complete (map 00, 17/17 tickets; specs in .scratch/rust-rewrite/specs/).
 - M0: workspace + crate skeleton + local PTY vertical slice (GPUI Kit window,
   wezterm-term screen model, portable-pty shell).
+- M1: multi-tab workspace + nested PaneTree splits + rename/close/maximize
+  (macOS dogfood; see .scratch/implementation/m1.md).
 
 ## Build
 

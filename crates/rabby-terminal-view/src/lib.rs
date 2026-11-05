@@ -21,6 +21,10 @@ impl TerminalElement {
     }
 }
 
+pub struct PaneActivated;
+
+impl EventEmitter<PaneActivated> for TerminalPane {}
+
 pub struct TerminalPane {
     core: TerminalCore,
     pty: PtySession,
@@ -67,6 +71,10 @@ impl TerminalPane {
         pane
     }
 
+    pub fn focus(&self, window: &mut Window, cx: &mut App) {
+        window.focus(&self.focus_handle, cx);
+    }
+
     fn refresh_rows(&mut self) {
         self.rows = self
             .core
@@ -89,6 +97,9 @@ impl TerminalPane {
 
     fn handle_key(&mut self, event: &KeyDownEvent, cx: &mut Context<Self>) {
         let ks = &event.keystroke;
+        if ks.modifiers.platform {
+            return;
+        }
         let mut mods = KeyModifiers::NONE;
         if ks.modifiers.control {
             mods |= KeyModifiers::CTRL;
@@ -147,6 +158,13 @@ impl Render for TerminalPane {
             .font_family("Menlo")
             .text_size(px(FONT_SIZE))
             .track_focus(&self.focus_handle)
+            .on_mouse_down(
+                MouseButton::Left,
+                cx.listener(|this, _, window, cx| {
+                    window.focus(&this.focus_handle, cx);
+                    cx.emit(PaneActivated);
+                }),
+            )
             .on_key_down(cx.listener(|this, event: &KeyDownEvent, _window, cx| {
                 this.handle_key(event, cx);
             }))

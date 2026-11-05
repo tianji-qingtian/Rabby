@@ -5192,13 +5192,7 @@ checksum = "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf"
 name = "rabby-app"
 version = "0.1.0"
 dependencies = [
- "anyhow",
  "gpui-kit",
- "rabby-core",
- "rabby-platform",
- "rabby-pty",
- "rabby-terminal",
- "rabby-terminal-view",
  "rabby-ui",
 ]
 
@@ -5296,6 +5290,9 @@ name = "rabby-ui"
 version = "0.1.0"
 dependencies = [
  "gpui-kit",
+ "rabby-core",
+ "rabby-platform",
+ "rabby-session",
  "rabby-terminal-view",
 ]
 

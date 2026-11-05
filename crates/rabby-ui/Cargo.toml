@@ -6,4 +6,7 @@ license.workspace = true
 
 [dependencies]
 gpui-kit.workspace = true
+rabby-core = { path = "../rabby-core" }
+rabby-platform = { path = "../rabby-platform" }
+rabby-session = { path = "../rabby-session" }
 rabby-terminal-view = { path = "../rabby-terminal-view" }
