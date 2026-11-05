@@ -1,0 +1,11 @@
+# Local build caches (kept out of the repo)
+.cargo-home/
+.rustup-home/
+target/
+**/target/
+.dsh-write-probe
+*.log
+
+# Local scratch files
+/t.md
+/tmp.md
