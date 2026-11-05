@@ -1,0 +1,10 @@
+[package]
+name = "rabby-terminal-view"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+gpui-kit.workspace = true
+rabby-pty = { path = "../rabby-pty" }
+rabby-terminal = { path = "../rabby-terminal" }

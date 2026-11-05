@@ -1,0 +1,15 @@
+[package]
+name = "rabby-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+gpui-kit.workspace = true
+rabby-core = { path = "../rabby-core" }
+rabby-platform = { path = "../rabby-platform" }
+rabby-pty = { path = "../rabby-pty" }
+rabby-terminal = { path = "../rabby-terminal" }
+rabby-terminal-view = { path = "../rabby-terminal-view" }
+rabby-ui = { path = "../rabby-ui" }

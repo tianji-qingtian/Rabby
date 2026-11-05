@@ -1,0 +1,11 @@
+[package]
+name = "rabby-session"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+rabby-core = { path = "../rabby-core" }
+rabby-pty = { path = "../rabby-pty" }
+rabby-terminal = { path = "../rabby-terminal" }

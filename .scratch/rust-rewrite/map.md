@@ -7,7 +7,7 @@
 
 ## Destination
 
-一份可直接开工的 Rabby 技术蓝图：在 macOS / Windows / Linux 上以 Rust 重写 Tabby 的核心能力（终端、SSH、串口、标签/分屏、配置与密钥、扩展），UI 以 GPUI Kit 为主、NSH 按需；本图以“决策全部锁定、规格可交给实施 agent”为终点，代码由后续实施 effort 执行。
+一份可直接开工的 Rabby 蓝图，现已进入实施：从 M0 骨架到可运行 MVP、再到 v1.0。蓝图部分已锁定（17/17 决策）；实施计划见 specs/delivery-plan.md，M0 进展见 .scratch/implementation/m0.md。
 
 ## Notes
 

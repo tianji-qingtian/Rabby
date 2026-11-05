@@ -1,0 +1,8 @@
+[package]
+name = "rabby-ext-host"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+rabby-ext-api = { path = "../rabby-ext-api" }
